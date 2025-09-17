@@ -1,0 +1,26 @@
+p, li, li a {
+	color: yellow;
+}
+body {
+  background-color: lightblue;
+}
+
+.highlight {
+  background-color: yellow;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.highlight:hover {
+  background-color: orange;
+  cursor: pointer;
+}
+
+.highlight--clone {
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.border-dotted {
+	border-style: groove;
+}
