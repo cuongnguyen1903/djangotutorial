@@ -1,0 +1,39 @@
+{% load static %}
+{% load bootstrap4 %}  <!--Load the collection of template tags of bootstrap-->
+
+<!DOCTYPE html>  <!--Declare this file as an HTML document-->
+
+<html lang="en"> 
+
+<head>
+  <!--Head part of HTML, no content here, just telling how to display-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning Log</title>
+	
+	{% bootstrap_css %}   <!--Tell Django to include all Bootstrap style files-->
+  	
+  <link rel="stylesheet" href="{% static 'polls/css/style.css' %}?v=3.21">
+	
+	<!--<img src="{% static 'polls/images/background.png' %}" alt="Background">-->
+
+    
+</head>
+
+<body>
+
+<main role="main" class="container">
+    <div class="pb-2 mb-2 border-bottom">
+      {% block page_header %}{% endblock page_header %}
+    </div>
+    <div class="background-image">
+      {% block content %}{% endblock content %}
+    </div>
+  </main>
+  
+	{% bootstrap_javascript jquery='full' %}
+</body>
+
+</html>
+
+

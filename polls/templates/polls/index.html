@@ -1,0 +1,28 @@
+{% extends "polls/base.html" %}
+
+{% block page_header %}
+  <div class="jumbotron">
+    <h1 class="display-3">POLLS</h1>
+	  <p class="lead">Set a Polls with Question and people can give their choices.</p>
+	
+	{% if not user.is_authenticated %}
+	  <a class="btn btn-lg btn-primary" href="#" role="button">Join and give your choice &raquo;</a>
+	{% endif %}	
+  </div>  
+{% endblock page_header %}
+
+{% block content %} 
+  <p class="img">Index view</p>
+  <p>POLLS helps you keep track of your Questions. For any question, have choices and votes for it.</p>
+
+  {% if latest_question_list %}
+    <ul>
+      {% for question in latest_question_list %}
+        <li class="text-box"><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No polls are available.</p>
+  {% endif %}
+
+{% endblock content %}

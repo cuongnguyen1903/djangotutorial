@@ -1,18 +1,22 @@
 asgiref==3.9.1
 beautifulsoup4==4.13.4
-certifi==2025.7.9
+certifi==2025.6.15
 charset-normalizer==3.4.2
 dj-database-url==3.0.1
 Django==5.2.4
-django-bootstrap4==25.2
+django-bootstrap4==25.1
 django-debug-toolbar==6.0.0
 django-environ==0.12.0
-django-polls @ file:///D:/PROGRAM/CODEPROJECTs/Python/django-polls/dist/django_polls-0.1.tar.gz#sha256=b2fdaf0c7e81485b8d64a05da4d6d2f7ccbfb2751d0a5f09fbbaf516648fdc9f
+django-heroku==0.3.1
+gunicorn==23.0.0
 idna==3.10
+packaging==25.0
+psycopg2==2.9.10
+python-decouple==3.8
 requests==2.32.4
-setuptools==80.9.0
 soupsieve==2.7
 sqlparse==0.5.3
 typing_extensions==4.14.1
 tzdata==2025.2
 urllib3==2.5.0
+whitenoise==6.9.0
