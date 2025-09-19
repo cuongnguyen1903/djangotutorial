@@ -5,10 +5,10 @@
 {% block page_header %}
 <div class="card-header d-flex align-items-center">
   <span class="m-0 ml">
-    <a href="{% url 'polls:topics' %}">Back</a>
+    <a href="{% url 'polls:question' %}">Back</a>
 	</span> 
   <span class="m-0 mx-auto">
-	  <h5><p>Add new topic:</p></h5>
+	  <h5><p>Add Poll:</p></h5>
 	</span>    
 </div>
 
@@ -16,7 +16,7 @@
 
 {% block content %}
 
-<form action="{% url 'polls:new_topic' %}" method='post'>
+<form action="{% url 'polls:new_poll' %}" method='post'>
   {% csrf_token %}
   {% bootstrap_form form %}
   {% buttons %}  
